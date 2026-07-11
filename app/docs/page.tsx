@@ -6,7 +6,7 @@ const rows = [
   ["Supply", "1,000,000,000 tokens"],
   ["Tax", "0/0 unless a future deployment states otherwise"],
   ["Mechanic", "Lore drops via Supabase transmissions table"],
-  ["Claims", "No holder, volume, or price claims on this site"]
+  ["X", "@agentz402"]
 ];
 
 export default function DocsPage() {
@@ -17,10 +17,9 @@ export default function DocsPage() {
       <Nav />
       <section className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
         <p className="font-mono text-xs uppercase tracking-[0.28em] text-signal">token docs</p>
-        <h1 className="mt-4 text-4xl font-semibold text-white sm:text-5xl">Transparent by default</h1>
+        <h1 className="mt-4 text-4xl font-semibold text-white sm:text-5xl">Token signal</h1>
         <p className="mt-5 max-w-3xl text-lg leading-8 text-white/66">
-          These fields are project documentation, not live market analytics. Any deployment-specific contract address
-          should be set through the public environment variable before release.
+          The shell room for $AGENTZ: contract, supply, relays, and the transmission feed.
         </p>
         <div className="mt-8">
           <CopyAddress address={address} />
@@ -33,7 +32,14 @@ export default function DocsPage() {
             </div>
           ))}
         </div>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          <a
+            href="https://x.com/agentz402"
+            className="terminal-card rounded-lg p-5 text-white/76 transition hover:border-signal/40"
+          >
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-signal">X</span>
+            <span className="mt-2 block text-lg">@agentz402</span>
+          </a>
           <a
             href="https://imfebu.com/"
             className="terminal-card rounded-lg p-5 text-white/76 transition hover:border-signal/40"

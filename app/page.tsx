@@ -71,6 +71,12 @@ export default async function Home() {
             >
               Token docs
             </Link>
+            <a
+              href="https://x.com/agentz402"
+              className="inline-flex h-12 items-center rounded-md border border-white/18 px-5 font-mono text-xs uppercase tracking-[0.16em] text-white/76 transition hover:border-signal/40 hover:text-signal"
+            >
+              X / @agentz402
+            </a>
           </div>
         </div>
       </section>
@@ -106,11 +112,15 @@ export default async function Home() {
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.28em] text-signal">external relays</p>
             <p className="mt-2 text-white/66">
-              Project references:{" "}
+              Relays:{" "}
+              <a className="text-signal underline-offset-4 hover:underline" href="https://x.com/agentz402">
+                @agentz402
+              </a>
+              {" / "}
               <a className="text-signal underline-offset-4 hover:underline" href="https://imfebu.com/">
                 imfebu.com
               </a>{" "}
-              and{" "}
+              /{" "}
               <a className="text-signal underline-offset-4 hover:underline" href="https://theinterlocution.com/">
                 theinterlocution.com
               </a>
