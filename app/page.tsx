@@ -3,9 +3,10 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { CopyAddress } from "@/components/CopyAddress";
 import { Nav } from "@/components/Nav";
+import { AGENTZ_CA, AGENTZ_DEXSCREENER_URL, AGENTZ_X_URL } from "@/lib/constants";
 
 export default function Home() {
-  const address = process.env.NEXT_PUBLIC_AGENTZ_CA || "TBA";
+  const address = process.env.NEXT_PUBLIC_AGENTZ_CA || AGENTZ_CA;
 
   return (
     <main className="min-h-screen">
@@ -50,10 +51,16 @@ export default function Home() {
               Token docs
             </Link>
             <a
-              href="https://x.com/agentz402"
+              href={AGENTZ_X_URL}
               className="inline-flex h-12 items-center rounded-md border border-white/18 px-5 font-mono text-xs uppercase tracking-[0.16em] text-white/76 transition hover:border-signal/40 hover:text-signal"
             >
               X / @agentz402
+            </a>
+            <a
+              href={AGENTZ_DEXSCREENER_URL}
+              className="inline-flex h-12 items-center rounded-md border border-white/18 px-5 font-mono text-xs uppercase tracking-[0.16em] text-white/76 transition hover:border-signal/40 hover:text-signal"
+            >
+              Dexscreener
             </a>
           </div>
         </div>
@@ -65,8 +72,12 @@ export default function Home() {
             <p className="font-mono text-xs uppercase tracking-[0.28em] text-signal">external relays</p>
             <p className="mt-2 text-white/66">
               Relays:{" "}
-              <a className="text-signal underline-offset-4 hover:underline" href="https://x.com/agentz402">
+              <a className="text-signal underline-offset-4 hover:underline" href={AGENTZ_X_URL}>
                 @agentz402
+              </a>
+              {" / "}
+              <a className="text-signal underline-offset-4 hover:underline" href={AGENTZ_DEXSCREENER_URL}>
+                Dexscreener
               </a>
               {" / "}
               <a className="text-signal underline-offset-4 hover:underline" href="https://imfebu.com/">
@@ -78,6 +89,10 @@ export default function Home() {
               </a>
               .
             </p>
+          </div>
+          <div className="min-w-0 font-mono text-xs uppercase tracking-[0.14em] text-white/54 sm:text-right">
+            CA:
+            <span className="mt-1 block break-all text-signal">{address}</span>
           </div>
           <Link
             href="/lore"

@@ -1,16 +1,18 @@
 import { Nav } from "@/components/Nav";
 import { CopyAddress } from "@/components/CopyAddress";
+import { AGENTZ_CA, AGENTZ_DEXSCREENER_URL, AGENTZ_X_URL } from "@/lib/constants";
 
 const rows = [
   ["Ticker", "$AGENTZ"],
   ["Supply", "1,000,000,000 tokens"],
   ["Tax", "0/0 unless a future deployment states otherwise"],
   ["Mechanic", "Lore drops via Supabase transmissions table"],
-  ["X", "@agentz402"]
+  ["X", "@agentz402"],
+  ["Dexscreener", "Added, link ready"]
 ];
 
 export default function DocsPage() {
-  const address = process.env.NEXT_PUBLIC_AGENTZ_CA || "TBA";
+  const address = process.env.NEXT_PUBLIC_AGENTZ_CA || AGENTZ_CA;
 
   return (
     <main className="min-h-screen">
@@ -34,11 +36,18 @@ export default function DocsPage() {
         </div>
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           <a
-            href="https://x.com/agentz402"
+            href={AGENTZ_X_URL}
             className="terminal-card rounded-lg p-5 text-white/76 transition hover:border-signal/40"
           >
             <span className="font-mono text-xs uppercase tracking-[0.2em] text-signal">X</span>
             <span className="mt-2 block text-lg">@agentz402</span>
+          </a>
+          <a
+            href={AGENTZ_DEXSCREENER_URL}
+            className="terminal-card rounded-lg p-5 text-white/76 transition hover:border-signal/40"
+          >
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-signal">Chart</span>
+            <span className="mt-2 block text-lg">Dexscreener</span>
           </a>
           <a
             href="https://imfebu.com/"
