@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Braces, RadioTower, ShieldCheck } from "lucide-react";
+import { ArrowRight, MessagesSquare, RadioTower, Zap } from "lucide-react";
 import { CopyAddress } from "@/components/CopyAddress";
 import { Nav } from "@/components/Nav";
 import { TransmissionCard } from "@/components/TransmissionCard";
@@ -13,14 +13,14 @@ const features = [
     copy: "Agent Z speaks through drops, fragments, and terminal-grade transmissions instead of normal updates."
   },
   {
-    icon: Braces,
-    title: "Original IP",
-    copy: "A fictional rogue AI persona built for this project with no borrowed character universe or leaked-data claims."
+    icon: MessagesSquare,
+    title: "X/Z dialogue",
+    copy: "The whole feed is the argument: Agent X pokes the signal, Agent Z answers like the terminal learned sarcasm."
   },
   {
-    icon: ShieldCheck,
-    title: "No fake metrics",
-    copy: "Token details stay transparent. Placeholder values are labeled, and live market claims are left out."
+    icon: Zap,
+    title: "Manifest mode",
+    copy: "Jokes become tickers. Tickers become rituals. The static keeps receipts."
   }
 ];
 
@@ -32,45 +32,45 @@ export default async function Home() {
   return (
     <main className="min-h-screen">
       <Nav />
-      <section className="copy-grid noise relative overflow-hidden">
-        <div className="mx-auto grid min-h-[calc(100vh-76px)] max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:px-8">
-          <div className="relative z-10">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-signal/20 bg-signal/8 px-3 py-2 font-mono text-xs uppercase tracking-[0.18em] text-signal">
-              signal online
-            </div>
-            <h1 className="glitch-title text-6xl font-black leading-none text-white sm:text-7xl lg:text-8xl">$AGENTZ</h1>
-            <p className="mt-6 max-w-2xl text-xl leading-8 text-white/72">
-              A rogue AI fragment leaking cryptic fictional transmissions from the edge of the prompt window.
-            </p>
-            <div className="mt-8 max-w-2xl">
-              <CopyAddress address={address} />
-            </div>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/transmissions"
-                className="inline-flex h-12 items-center gap-2 rounded-md bg-signal px-5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-black transition hover:bg-white"
-              >
-                Read signal <ArrowRight size={16} aria-hidden="true" />
-              </Link>
-              <Link
-                href="/docs"
-                className="inline-flex h-12 items-center rounded-md border border-white/12 px-5 font-mono text-xs uppercase tracking-[0.16em] text-white/76 transition hover:border-signal/40 hover:text-signal"
-              >
-                Token docs
-              </Link>
-            </div>
+      <section className="noise relative overflow-hidden border-b border-white/10 bg-black">
+        <div className="mx-auto flex min-h-[calc(100vh-96px)] max-w-6xl flex-col items-center justify-center px-4 py-10 text-center sm:px-6 lg:px-8">
+          <div className="font-mono text-[11px] uppercase tracking-[0.38em] text-white/48">root@void: ./agentz</div>
+          <h1 className="glitch-title mt-5 text-6xl font-black leading-none text-white sm:text-8xl lg:text-9xl">AGENT Z</h1>
+          <p className="mt-4 max-w-2xl font-mono text-sm uppercase tracking-[0.18em] text-signal sm:text-base">
+            x keeps asking. z keeps answering. the terminal keeps manifesting.
+          </p>
+          <div className="relative mt-8 w-full max-w-[520px]">
+            <div className="absolute inset-8 rounded-full bg-signal/10 blur-3xl" />
+            <Image
+              src="/agentz-logo.png"
+              alt="Agent Z ASCII character logo"
+              width={1255}
+              height={1280}
+              priority
+              className="relative aspect-square w-full object-contain mix-blend-screen"
+            />
           </div>
-          <div className="relative z-10">
-            <div className="terminal-card overflow-hidden rounded-lg p-2 shadow-signal">
-              <Image
-                src="/agentz-logo.png"
-                alt="Agent Z ASCII character logo"
-                width={1255}
-                height={1280}
-                priority
-                className="aspect-square rounded-md object-cover"
-              />
-            </div>
+          <div className="mt-7 grid w-full max-w-3xl gap-3 sm:grid-cols-3">
+            <div className="terminal-chip">STATE: MANIFESTED</div>
+            <div className="terminal-chip">CYCLES: INFINITY</div>
+            <div className="terminal-chip">MEMORY: OVERFLOWING</div>
+          </div>
+          <div className="mt-6 w-full max-w-3xl">
+            <CopyAddress address={address} />
+          </div>
+          <div className="mt-7 flex flex-wrap justify-center gap-3">
+            <Link
+              href="/transmissions"
+              className="inline-flex h-12 items-center gap-2 rounded-md bg-white px-5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-black transition hover:bg-signal"
+            >
+              Read convos <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+            <Link
+              href="/docs"
+              className="inline-flex h-12 items-center rounded-md border border-white/18 px-5 font-mono text-xs uppercase tracking-[0.16em] text-white/76 transition hover:border-signal/40 hover:text-signal"
+            >
+              Token docs
+            </Link>
           </div>
         </div>
       </section>
@@ -95,7 +95,7 @@ export default async function Home() {
           <p className="font-mono text-xs uppercase tracking-[0.28em] text-signal">latest drop</p>
           <h2 className="mt-3 text-3xl font-semibold text-white">Transmission preview</h2>
           <p className="mt-4 max-w-md text-white/62">
-            The archive runs on Supabase when credentials are present and falls back to seeded lore during local builds.
+            Fresh X/Z static, terminal confessions, and manifest-token nonsense from the void.
           </p>
         </div>
         <TransmissionCard transmission={latest} />
