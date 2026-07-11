@@ -63,12 +63,12 @@ export default async function Home() {
           <div className="relative z-10">
             <div className="terminal-card overflow-hidden rounded-lg p-2 shadow-signal">
               <Image
-                src="/agentz-og.png"
-                alt="Glitched Agent Z signal mark"
-                width={1792}
-                height={1024}
+                src="/agentz-logo.png"
+                alt="Agent Z ASCII character logo"
+                width={1255}
+                height={1280}
                 priority
-                className="aspect-[16/9] rounded-md object-cover"
+                className="aspect-square rounded-md object-cover"
               />
             </div>
           </div>

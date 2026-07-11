@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const links = [
   { href: "/", label: "Home" },
@@ -11,7 +12,8 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-signal/10 bg-void/78 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl flex-col items-start gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-        <Link href="/" className="font-mono text-sm font-bold tracking-[0.2em] text-signal">
+        <Link href="/" className="flex items-center gap-2 font-mono text-sm font-bold tracking-[0.2em] text-signal">
+          <Image src="/agentz-logo.png" alt="" width={28} height={28} className="h-7 w-7 rounded-sm object-cover" />
           $AGENTZ
         </Link>
         <div className="flex w-full items-center justify-between gap-1 rounded-full border border-white/10 bg-white/[0.03] p-1 font-mono text-[10px] uppercase text-white/62 sm:w-auto sm:justify-start sm:text-xs">
